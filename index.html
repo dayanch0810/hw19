@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/fancybox.css">
+    <script src="js/fancybox.umd.js"></script>
+
+    <link rel="stylesheet" href="css/splide.min.css">
+    <script src="js/splide.min.js"></script>
+
+    <link rel="stylesheet" href="css/aos.css">
+    <script src="js/aos.js"></script>
+</head>
+<body>
+
+
+    
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+            // Your custom options
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide = new Splide('.splide', {
+                type: 'loop',
+                autoplay: true,
+                interval: 5e3,
+                perPage: 2,
+                perMove: 2,
+                gap: '1rem',
+                pagination: 0,
+                breakpoints: {
+                    767: {
+                        perPage: 1,
+                        perMove: 1,
+                    },
+                },
+            });
+            splide.mount();
+        });
+    </script>
+    
+    <script>
+        AOS.init({
+            once: true,
+        });
+    </script>
+
+</body>
+</html>
