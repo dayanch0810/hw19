@@ -17,31 +17,75 @@
 
     <link rel="stylesheet" href="css/aos.css">
     <script src="js/aos.js"></script>
+
+    <style>
+        .bg-image {
+            background-image: url("img/top-left-bg.jpg");
+            background-color: #000000;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: start;
+            background-size: cover;    
+            display: flex;
+            align-items: center;
+        }
+
+        .text-orange {
+            color: rgb(251, 99, 85);
+        }
+
+        .bg-orange {
+            background-color: rgb(251, 99, 85);
+        }
+    </style>
+
 </head>
 <body>
-
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-4">
+                <div class="bg-image h-100">
+                    <div class="px-3">
+                        <div class="display-6 text-white">KlassyCafe</div>
+                        <div class="small text-white text-uppercase fw-semibold pb-3">the best experience</div>
+                        <div class="btn btn-light fw-semibold text-orange">Make A Reservation</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="img/slide-01.jpg" alt="" class="img-fluid">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="img/slide-02.jpg" alt="" class="img-fluid">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="img/slide-03.jpg" alt="" class="img-fluid">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     
     <script>
         Fancybox.bind("[data-fancybox]", {
-            // Your custom options
         });
         document.addEventListener('DOMContentLoaded', function () {
-            var splide = new Splide('.splide', {
-                type: 'loop',
-                autoplay: true,
-                interval: 5e3,
-                perPage: 2,
-                perMove: 2,
-                gap: '1rem',
-                pagination: 0,
-                breakpoints: {
-                    767: {
-                        perPage: 1,
-                        perMove: 1,
-                    },
-                },
-            });
+            var splide = new Splide( '.splide', {
+            type   : 'loop',
+            perPage: 1,
+            perMove: 1,
+            autoplay: true,
+            interval: 5e3,
+            pagination: false,
+            } );
+
             splide.mount();
         });
     </script>
