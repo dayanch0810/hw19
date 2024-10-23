@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +26,7 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: start;
-            background-size: cover;    
+            background-size: cover;
             display: flex;
             align-items: center;
         }
@@ -40,7 +41,52 @@
     </style>
 
 </head>
+
 <body>
+
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-4 d-flex justify-content-center">
+                <img src="img/klassy-logo.png" alt="">
+            </div>
+            <div class="col-8">
+
+                <ul class="nav nav-underline justify-content-end px-5">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-orange fw-bold" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-bold" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-bold" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-bold" aria-disabled="true">Chefs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Features
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-bold" aria-disabled="true">Contact Us</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row g-0">
             <div class="col-4">
@@ -72,24 +118,23 @@
         </div>
     </div>
 
-    
     <script>
         Fancybox.bind("[data-fancybox]", {
         });
         document.addEventListener('DOMContentLoaded', function () {
-            var splide = new Splide( '.splide', {
-            type   : 'loop',
-            perPage: 1,
-            perMove: 1,
-            autoplay: true,
-            interval: 5e3,
-            pagination: false,
-            } );
+            var splide = new Splide('.splide', {
+                type: 'loop',
+                perPage: 1,
+                perMove: 1,
+                autoplay: true,
+                interval: 5e3,
+                pagination: false,
+            });
 
             splide.mount();
         });
     </script>
-    
+
     <script>
         AOS.init({
             once: true,
@@ -97,4 +142,5 @@
     </script>
 
 </body>
+
 </html>
