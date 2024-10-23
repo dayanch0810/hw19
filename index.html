@@ -31,6 +31,15 @@
             align-items: center;
         }
 
+        .bg-image-2 {
+            background-image: url("img/reservation-bg.jpg");
+            background-color: #000000;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: start;
+            background-size: cover;
+        }
+
         .text-orange {
             color: rgb(251, 99, 85);
         }
@@ -42,6 +51,16 @@
         .bg-opacity {
             opacity: 10%;
         }
+
+        .btn-orange {
+            --bs-btn-color: #fff;
+            --bs-btn-bg: rgb(251, 99, 85);
+            --bs-btn-border-color: rgba(252, 92, 77, 0.925);
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: rgb(238, 87, 74);
+            --bs-btn-hover-border-color: rgb(252, 92, 77);
+        }
+        
     </style>
 
 </head>
@@ -167,6 +186,67 @@
                     <img src="img/chefs-03.jpg" alt="" class="img-fluid py-4">
                     <div class="h4 fw-bold">Peter Perkson</div>
                     <div class="small text-secondary fw-semibold pb-4">Pancake Chef</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-image-2">
+        <div class="container py-5">
+            <div class="row py-5">
+                <div class="col">
+                    <div class="small text-light text-uppercase fw-semibold pb-2">contact us</div>
+                    <div class="display-6 text-light fw-bold pb-3">Here You Can Make A Reservation Or Just Walkin To Our Cafe</div>
+                    <div class="text-light pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel provident ipsa repellendus ut expedita atque nesciunt iusto facere dolor non.</div>
+                    <div class="row">
+                        <div class="col bg-light text-center position-relative rounded py-3 mx-2">
+                            <div class="h4 fw-bold">Phone Numbers</div>
+                            <div><a href="#" class="text-decoration-none text-secondary">080-090-0990</a></div>
+                            <div><a href="#" class="text-decoration-none text-secondary">080-090-0880</a></div>
+                            <div class="h1 position-absolute top-0 start-50 translate-middle text-orange"><i class="bi-telephone-fill"></i></div>
+                        </div>
+                        <div class="col bg-light text-center position-relative rounded py-3 mx-2">
+                            <div class="h4 fw-bold">Emails</div>
+                            <div><a href="#" class="text-decoration-none text-secondary">hello@company.com</a></div>
+                            <div><a href="#" class="text-decoration-none text-secondary">info@company.com</a></div>
+                            <div class="h1 position-absolute top-0 start-50 translate-middle text-orange"><i class="bi-envelope-fill"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-light rounded p-5">
+                        <div class="h2 text-center fw-bold pb-4">Table Reservation</div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-2">
+                                    <input type="text" class="form-control" placeholder="Your Name*">
+                                </div>
+                                <div class="input-group mb-2">
+                                    <span class="input-group-text" id="basic-addon1">+993</span>
+                                    <input type="number" class="form-control" placeholder="Phone Number*" aria-label="telefon belgi">
+                                </div>
+                                <div class="mb-2">
+                                    <input type="datetime-local" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-2">
+                                    <input type="email" class="form-control" placeholder="Your Email Address">
+                                </div>
+                                <div class="mb-2">
+                                    <input type="number" class="form-control" placeholder="Number Of Guests">
+                                </div>
+                                <div class="mb-2">
+                                    <input type="time" class="form-control" placeholder="Time">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Message</label>
+                        </div>
+                        <div class="btn btn-orange  w-100">Make A Reservation</div>
+                    </div>
                 </div>
             </div>
         </div>
