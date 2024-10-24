@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'ImperialScript';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../font/ImperialScript-Regular.ttf');
+}
+
+.font-ubuntu {
+    font-family: 'ImperialScript', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@font-face {
+    font-family: 'DancingScript';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/DancingScript-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'DancingScript';
+    font-style: medium;
+    font-weight: 500;
+    src: url('../font/DancingScript-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'DancingScript';
+    font-style: bold;
+    font-weight: 600;
+    src: url('../font/DancingScript-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'DancingScript';
+    font-style: bolder;
+    font-weight: 700;
+    src: url('../font/DancingScript-Bold.ttf');
+}
+
+.font-ubuntu {
+    font-family: 'DancingScript', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
