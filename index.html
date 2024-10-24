@@ -121,7 +121,7 @@
                 </div>
             </div>
             <div class="col-8">
-                <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                <div id="splide1" class="splide" role="group" aria-label="Splide Basic HTML Example">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
@@ -167,27 +167,44 @@
     </div>
 
     <div class="bg-opacity p-5">
-        <div class="p-5">
-            <div class="small text-uppercase text-orange fw-semibold pb-3">our menu</div>
-            <div class="display-6 fw-bold pb-3">Our selection of cakes <br> with quality taste</div>
+        <div class="container p-5">
+            <div class="p-5">
+                <div class="small text-uppercase text-orange fw-semibold pb-3">our menu</div>
+                <div class="display-6 fw-bold pb-3">Our selection of cakes <br> with quality taste</div>
+            </div>
         </div>
-        <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+        <div id="splide2" class="splide" role="group" aria-label="Second Splide Example">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <img src="img/menu-item-01.jpg" alt="" class="img-fluid">
+                        <div class="position-relative">
+                            <img src="img/menu-item-01.jpg" alt="" class="img-fluid">
+                            <div class="h5 bg-orange text-light text-center w-25 position-absolute top-0 start-0 py-4">$14.00</div>
+                        </div>
                     </li>
                     <li class="splide__slide">
-                        <img src="img/menu-item-02.jpg" alt="" class="img-fluid">
+                        <div class="position-relative">
+                            <img src="img/menu-item-02.jpg" alt="" class="img-fluid">
+                            <div class="h5 bg-orange text-light text-center w-25 position-absolute top-0 start-0 py-4">$22.00</div>
+                        </div>
                     </li>
                     <li class="splide__slide">
-                        <img src="img/menu-item-03.jpg" alt="" class="img-fluid">
+                        <div class="position-relative">
+                            <img src="img/menu-item-03.jpg" alt="" class="img-fluid">
+                            <div class="h5 bg-orange text-light text-center w-25 position-absolute top-0 start-0 py-4">$7.25</div>
+                        </div>
                     </li>
                     <li class="splide__slide">
-                        <img src="img/menu-item-04.jpg" alt="" class="img-fluid">
+                        <div class="position-relative">
+                            <img src="img/menu-item-04.jpg" alt="" class="img-fluid">
+                            <div class="h5 bg-orange text-light text-center w-25 position-absolute top-0 start-0 py-4">$10.50</div>
+                        </div>
                     </li>
                     <li class="splide__slide">
-                        <img src="img/menu-item-05.jpg" alt="" class="img-fluid">
+                        <div class="position-relative">
+                            <img src="img/menu-item-05.jpg" alt="" class="img-fluid">
+                            <div class="h5 bg-orange text-light text-center w-25 position-absolute top-0 start-0 py-4">$8.50</div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -428,17 +445,27 @@
     <script>
         Fancybox.bind("[data-fancybox]", {
         });
+
         document.addEventListener('DOMContentLoaded', function () {
-            var splide = new Splide('.splide', {
+            new Splide('#splide1', {
                 type: 'loop',
                 perPage: 1,
                 perMove: 1,
                 autoplay: true,
                 interval: 5e3,
                 pagination: false,
-            });
+            }).mount();
 
-            splide.mount();
+            new Splide('#splide2', {
+                type: 'loop',
+                perPage: 4,
+                perMove: 1,
+                padding: '5rem',
+                autoplay: true,
+                interval: 5e3,
+                pagination: false,
+            }).mount();
+
         });
     </script>
 
