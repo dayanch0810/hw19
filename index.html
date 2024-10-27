@@ -112,16 +112,16 @@
 
     <div class="container-xl">
         <div class="row text-center g-0">
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="bg-image h-100">
                     <div class="px-3">
-                        <div class="display-4 klassy-font text-white">KlassyCafe</div>
+                        <div class="display-4 klassy-font text-white mt-1">KlassyCafe</div>
                         <div class="small text-white text-uppercase fw-semibold pb-3">the best experience</div>
-                        <div class="btn btn-light fw-semibold text-orange">Make A Reservation</div>
+                        <div class="btn btn-light fw-semibold text-orange mb-3">Make A Reservation</div>
                     </div>
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-md-8">
                 <div id="splide1" class="splide" role="group" aria-label="Splide Basic HTML Example">
                     <div class="splide__track">
                         <ul class="splide__list">
@@ -145,16 +145,31 @@
                 </div>
             </div>
         </div>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function () {
+                new Splide('#splide1', {
+                    type: 'loop',
+                    perPage: 1,
+                    perMove: 1,
+                    autoplay: true,
+                    interval: 5e3,
+                    pagination: false,
+                    arrows: 0,
+                }).mount();
+            });
+
+        </script>
     </div>
 
     <div class="container-xl p-4 p-md-5">
-        <div class="row row-cols-1 row-cols-md-2 p-2 p-md-5 g-4">
+        <div class="row row-cols-1 row-cols-md-2 justify-content-center p-2 p-md-5 g-4">
             <div class="col">
                 <div class="small text-uppercase text-orange fw-semibold pb-3"><i class="bi-dash-lg"></i> about us</div>
                 <div class="display-6 fw-bold pb-3">We Leave A Delicious Memory For You</div>
                 <div class="pb-3">Lorem ipsum dolor sit, amet consectetur <span class="text-primary"> adipisicing elit. Odio magni, </span> molestias eligendi esse nemo, officiis dolore excepturi facere, harum nostrum eius odio ullam quas ipsum! Eius accusamus consectetur incidunt velit, quam, ad omnis eum consequuntur impedit similique, quidem reprehenderit!</div>
                 <div class="pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque harum ab sapiente, inventore praesentium pariatur repellendus corrupti? Minus, aliquid officiis?</div>
-                <div class="row row-cols-3">
+                <div class="row row-cols-auto row-cols-md-3 justify-content-center">
                     <div class="col">
                         <a href="img/about-thumb-01.jpg" data-fancybox="gallery" data-caption="about-thumb-01">
                             <img src="img/about-thumb-01.jpg" alt="" class="img-fluid">
@@ -172,93 +187,188 @@
                     </div>
                 </div>
             </div>
-            <div class="col d-flex justify-content-center align-items-center position-relative">
+            <div class="col-8 col-md-6 d-flex justify-content-center align-items-center position-relative">
                 <img src="img/about-video-bg.jpg" alt="" class="img-fluid">
                 <div class="display-4 text-orange position-absolute"><i class="bi-play-circle-fill"></i></div>
             </div>
         </div>
     </div>
 
-    <div class="bg-orange-opacity py-2 py-md-5">
-        <div class="container-xl">
-            <div class="p-4 p-md-5">
-                <div class="small text-uppercase text-orange fw-semibold pb-2 pb-md-3">our menu</div>
-                <div class="display-6 fw-bold pb-2 pb-md-3">Our selection of cakes <br> with quality taste</div>
-            </div>
-            <div id="splide2" class="splide" role="group" aria-label="Second Splide Example">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <div class="position-relative">
-                                <a href="img/menu-item-01.jpg" data-fancybox="gallery" data-caption="menu-item-01">
-                                    <img src="img/menu-item-01.jpg" alt="" class="img-fluid">
-                                </a>
-                                <div class="h5 bg-orange text-light text-center w-25 position-absolute top-0 start-0 py-4">$14.00</div>
+    <div class="container-xl pt-5">
+        <div class="fw-semibold text-danger mb-3">
+            <i class="bi-dash-lg"></i> OUR MENU
+        </div>
+        <div class="h2 fw-bold mb-5">
+            <div>Our selection of cakes</div>
+            <div>with quality taste</div>
+        </div>
+    </div>
+    <div class="pb-5">
+        <div class="splide splide-menu" role="group">
+            <div class="splide__track">
+                <ul class="splide__list">
+
+                    <li class="splide__slide">
+                        <div class="position-relative menu-item">
+                            <img src="img/menu-item-01.jpg" alt="" class="img-fluid rounded">
+                            <div class="position-absolute top-0 start-0">
+                                <div class="text-bg-danger p-1 p-sm-2 rounded">
+                                    <div class="h5 fw-bold mb-0">$14</div>
+                                </div>
                             </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="position-relative">
-                                <a href="img/menu-item-02.jpg" data-fancybox="gallery" data-caption="menu-item-02">
-                                    <img src="img/menu-item-02.jpg" alt="" class="img-fluid">
-                                </a>
-                                <div class="h5 bg-orange text-light text-center w-25 position-absolute top-0 start-0 py-4">$22.00</div>
+                            <div class="position-absolute bottom-0 text-center w-100">
+                                <div class="text-bg-danger p-2 p-sm-3 rounded">
+                                    <div class="h5 fw-bold mb-0">Chocolate Cake</div>
+                                    <div class="d-none description small mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium nisi architecto doloribus beatae natus laboriosam.</div>
+                                </div>
                             </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="position-relative">
-                                <a href="img/menu-item-03.jpg" data-fancybox="gallery" data-caption="menu-item-03">
-                                    <img src="img/menu-item-03.jpg" alt="" class="img-fluid">
-                                </a>
-                                <div class="h5 bg-orange text-light text-center w-25 position-absolute top-0 start-0 py-4">$7.25</div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="position-relative menu-item">
+                            <img src="img/menu-item-02.jpg" alt="" class="img-fluid rounded">
+                            <div class="position-absolute top-0 start-0">
+                                <div class="text-bg-danger p-1 p-sm-2 rounded">
+                                    <div class="h5 fw-bold mb-0">$22</div>
+                                </div>
                             </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="position-relative">
-                                <a href="img/menu-item-04.jpg" data-fancybox="gallery" data-caption="menu-item-04">
-                                    <img src="img/menu-item-04.jpg" alt="" class="img-fluid">
-                                </a>
-                                <div class="h5 bg-orange text-light text-center w-25 position-absolute top-0 start-0 py-4">$10.50</div>
+                            <div class="position-absolute bottom-0 text-center w-100">
+                                <div class="text-bg-danger p-2 p-sm-3 rounded">
+                                    <div class="h5 fw-bold mb-0">Klassy Pancake</div>
+                                    <div class="d-none description small mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati distinctio odit nam magnam saepe!</div>
+                                </div>
                             </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="position-relative">
-                                <a href="img/menu-item-05.jpg" data-fancybox="gallery" data-caption="menu-item-05">
-                                    <img src="img/menu-item-05.jpg" alt="" class="img-fluid">
-                                </a>
-                                <div class="h5 bg-orange text-light text-center w-25 position-absolute top-0 start-0 py-4">$8.50</div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="position-relative menu-item">
+                            <img src="img/menu-item-03.jpg" alt="" class="img-fluid rounded">
+                            <div class="position-absolute top-0 start-0">
+                                <div class="text-bg-danger p-1 p-sm-2 rounded">
+                                    <div class="h5 fw-bold mb-0">$15</div>
+                                </div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                            <div class="position-absolute bottom-0 text-center w-100">
+                                <div class="text-bg-danger p-2 p-sm-3 rounded">
+                                    <div class="h5 fw-bold mb-0">Klassy Cake</div>
+                                    <div class="d-none description small mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. A inventore eos, fugit saepe dolorum reprehenderit!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="splide__slide">
+                        <div class="position-relative menu-item">
+                            <img src="img/menu-item-04.jpg" alt="" class="img-fluid rounded">
+                            <div class="position-absolute top-0 start-0">
+                                <div class="text-bg-danger p-1 p-sm-2 rounded">
+                                    <div class="h5 fw-bold mb-0">$8.50</div>
+                                </div>
+                            </div>
+                            <div class="position-absolute bottom-0 text-center w-100">
+                                <div class="text-bg-danger p-2 p-sm-3 rounded">
+                                    <div class="h5 fw-bold mb-0">Klassy Cap Cake</div>
+                                    <div class="d-none description small mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae sit quam eos. Soluta, eos fugit.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="position-relative menu-item">
+                            <img src="img/menu-item-05.jpg" alt="" class="img-fluid rounded">
+                            <div class="position-absolute top-0 start-0">
+                                <div class="text-bg-danger p-1 p-sm-2 rounded">
+                                    <div class="h5 fw-bold mb-0">$7.25</div>
+                                </div>
+                            </div>
+                            <div class="position-absolute bottom-0 text-center w-100">
+                                <div class="text-bg-danger p-2 p-sm-3 rounded">
+                                    <div class="h5 fw-bold mb-0">Klassy Cap Cake</div>
+                                    <div class="d-none description small mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt tempora voluptatum reprehenderit nobis magnam minus.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var splide = new Splide('.splide-menu', {
+                    type: 'loop',
+                    autoplay: true,
+                    interval: 5e3,
+                    perPage: 6,
+                    gap: '1rem',
+                    padding: '5rem',
+                    pagination: 0,
+                    arrows: 0,
+                    breakpoints: {
+                        575: {
+                            perPage: 1,
+                        },
+                        767: {
+                            perPage: 2,
+                        },
+                        991: {
+                            perPage: 3,
+                        },
+                        1199: {
+                            perPage: 4,
+                        },
+                        1399: {
+                            perPage: 5,
+                        },
+                    },
+                });
+                splide.mount();
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    item.addEventListener('mouseenter', () => {
+                        item.querySelector('.description').classList.remove('d-none');
+                    });
+                    item.addEventListener('mouseleave', () => {
+                        item.querySelector('.description').classList.add('d-none');
+                    });
+                });
+            });
+        </script>
     </div>
 
     <div class="container-xl text-center p-4 p-md-5">
         <div class="p-md-5">
             <div class="small text-orange text-uppercase fw-semibold">our chefs</div>
             <div class="display-6 fw-bold pb-5">We offer the best <br> ingredients for you</div>
-            <div class="row g-0">
-                <div class="col border mx-2">
-                    <a href="img/chefs-01.jpg" data-fancybox="gallery" data-caption="chefs-01">
-                        <img src="img/chefs-01.jpg" alt="" class="img-fluid p-1">
-                    </a>
-                    <div class="h5 fw-bold pt-md-3">Randy Walker</div>
-                    <div class="small text-secondary fw-semibold pb-md-4">Pastry Chef</div>
+            <div class="row justify-content-center g-4 g-md-2">
+                <div class="col-9 col-md col-md-auto">
+                    <div class="border rounded">
+                        <a href="img/chefs-01.jpg" data-fancybox="gallery" data-caption="chefs-01">
+                            <img src="img/chefs-01.jpg" alt="" class="img-fluid p-1">
+                        </a>
+                        <div class="h5 fw-bold pt-md-3">Randy Walker</div>
+                        <div class="small text-secondary fw-semibold pb-md-4">Pastry Chef</div>
+                    </div>
                 </div>
-                <div class="col border mx-2">
-                    <a href="img/chefs-02.jpg" data-fancybox="gallery" data-caption="chefs-02">
-                        <img src="img/chefs-02.jpg" alt="" class="img-fluid p-1">
-                    </a>
-                    <div class="h5 fw-bold pt-md-3">David Martin</div>
-                    <div class="small text-secondary fw-semibold pb-md-4">Cookie Chef</div>
+                <div class="col-9 col-md col-md-auto">
+                    <div class="border rounded">
+                        <a href="img/chefs-02.jpg" data-fancybox="gallery" data-caption="chefs-02">
+                            <img src="img/chefs-02.jpg" alt="" class="img-fluid p-1">
+                        </a>
+                        <div class="h5 fw-bold pt-md-3">David Martin</div>
+                        <div class="small text-secondary fw-semibold pb-md-4">Cookie Chef</div>
+                    </div>
                 </div>
-                <div class="col border mx-2">
-                    <a href="img/chefs-03.jpg" data-fancybox="gallery" data-caption="chefs-03">
-                        <img src="img/chefs-03.jpg" alt="" class="img-fluid p-1">
-                    </a>
-                    <div class="h5 fw-bold pt-md-3">Peter Perkson</div>
-                    <div class="small text-secondary fw-semibold pb-md-4">Pancake Chef</div>
+                <div class="col-9 col-md col-md-auto">
+                    <div class="border rounded">
+                        <a href="img/chefs-03.jpg" data-fancybox="gallery" data-caption="chefs-03">
+                            <img src="img/chefs-03.jpg" alt="" class="img-fluid p-1">
+                        </a>
+                        <div class="h5 fw-bold pt-md-3">Peter Perkson</div>
+                        <div class="small text-secondary fw-semibold pb-md-4">Pancake Chef</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -482,33 +592,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        Fancybox.bind("[data-fancybox]", {
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('#splide1', {
-                type: 'loop',
-                perPage: 1,
-                perMove: 1,
-                autoplay: true,
-                interval: 5e3,
-                pagination: false,
-            }).mount();
-
-            new Splide('#splide2', {
-                type: 'loop',
-                perPage: 3,
-                perMove: 1,
-                padding: '12rem',
-                autoplay: true,
-                interval: 5e3,
-                pagination: false,
-            }).mount();
-
-        });
-    </script>
 
     <script>
         AOS.init({
