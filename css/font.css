@@ -40,3 +40,37 @@
 .font-ubuntu {
     font-family: 'DancingScript', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+
+@font-face {
+    font-family: 'DynaPuff';
+    font-style: small;
+    font-weight: 400;
+    src: url('../font/DynaPuff-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'DynaPuff';
+    font-style: medium;
+    font-weight: 500;
+    src: url('../font/DynaPuff-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'DynaPuff';
+    font-style: bold;
+    font-weight: 600;
+    src: url('../font/DynaPuff-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'DynaPuff';
+    font-style: bolder;
+    font-weight: 700;
+    src: url('../font/DynaPuff-Bold.ttf');
+}
+
+.font-DynaPuff {
+    font-family: 'DynaPuff', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
